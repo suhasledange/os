@@ -1,0 +1,4 @@
+ START 100
+ ADD AREG A
+A DS 2
+ END
