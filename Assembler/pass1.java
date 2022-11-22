@@ -29,9 +29,9 @@ public class pass1 {
                     code = "(AD,01) (C,"+lc+")";
                     FWrite.write(code+"\n");
                 }
+
                 if(parts[1].equals("END")){
                     code = "(AD,02)";
-
                     FWrite.write(code+"\n");
                 }
 
@@ -42,6 +42,7 @@ public class pass1 {
                 else
                     SYMTAB.put(parts[0],new TableRow(parts[0], lc, ++symIndex));
             }
+            
             if(parts[1].equals("DC"))
             {
                 lc++;
