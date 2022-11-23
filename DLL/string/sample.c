@@ -1,11 +1,22 @@
 #include <stdio.h>
 #include <string.h>
 #include "sample.h"
-JNIEXPORT int JNICALL Java_sample_oper(JNIEnv *env, jobject javaobj, jint s1, jint s2) 
+JNIEXPORT jstring JNICALL Java_sample_oper(JNIEnv *env, jobject javaobj, jstring s1, jstring s2) 
 {
-	if (strcmp(s1, s2) ==0)
-       return "string 1 and string 2 are equal";
-    else 
-       return "string 1 and 2 are different";
-      
+	 const char *ss1 = (*env)->GetStringUTFChars(env,s1, NULL);
+	  const char *ss2 = (*env)->GetStringUTFChars(env,s2, NULL);
+    	  jstring result;
+	  
+	if (strcmp(ss1, ss2) ==0)
+	{	char msg[60] = "string are equal";
+		result = (*env)->NewStringUTF(env,msg); 
+       	return result;
+	}
+    else {
+    		
+    		char msg[60] = "string are not equal";
+		result = (*env)->NewStringUTF(env,msg); 
+       	return result;
+       
+      }
 }
