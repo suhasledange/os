@@ -12,7 +12,7 @@ public class sample{
 		System.out.print("Enter first string: ");
 		s1 = scanner.nextLine();
 		System.out.print("Enter second string: ");
-		s2 = scanner.nexLine();
+		s2 = scanner.nextLine();
 		System.out.println("Result: "+new sample().oper(s1,s2));
 	}
 }
