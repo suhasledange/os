@@ -1,0 +1,4 @@
+javac sample.java
+javah sample
+gcc -o libsample.so -shared -fPIE -I /usr/lib/jvm/java-8-openjdk/include/linux/ -I /usr/lib/jvm/java-8-openjdk/include sample.c
+java sample 
