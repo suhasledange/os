@@ -2,19 +2,16 @@
 
 public class Scheduling {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-	FCFS fcfs=new FCFS();
-	//fcfs.execute();
-	SJF sjf=new SJF();
-	//sjf.execute();
-	
-	PriorityNonPreemptive pr=new PriorityNonPreemptive();
-	//pr.execute();
-	
-	RoundRobin rr=new RoundRobin();
-	rr.execute();
-	
-	}
+        FCFS fcfs=new FCFS();
+        SJF sjf=new SJF();
+
+        PriorityNonPreemptive pr=new PriorityNonPreemptive();
+
+        RoundRobin rr=new RoundRobin();
+        rr.execute();
+
+    }
 
 }

@@ -14,12 +14,12 @@ public class mutex {
                 if(readCount == 1){
                     writelock.acquire();
                 }
-                readlock.release();
 
                 System.out.println(Thread.currentThread().getName()+" is Reading");
                 Thread.sleep(1000);
-                System.out.println(Thread.currentThread().getName()+" has Finished");
-
+                System.out.println(Thread.currentThread().getName()+" has Finished");                
+                 readlock.release();
+                 
                 readlock.acquire();
                 readCount--;
 
